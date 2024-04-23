@@ -1,0 +1,10 @@
+INSERT INTO cashier (email,username,password)
+  VALUES ('johndoe@gmail.com', 'johndoe', 'johndoe123');
+INSERT INTO cashier (email,username,password)
+  VALUES ('jajang@gmail.com', 'jajang', 'jajang123');
+INSERT INTO cashier (email,username,password)
+  VALUES ('kasmir@gmail.com', 'kasmir', 'kasmir123');
+INSERT INTO cashier (email,username,password)
+  VALUES ('kasim@gmail.com', 'kasim', 'kasim123');
+INSERT INTO cashier (email,username,password)
+  VALUES ('ujang@gmail.com', 'ujang', 'ujang123');
