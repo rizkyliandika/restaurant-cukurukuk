@@ -90,9 +90,6 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\P051021010\Downloads\restaurant.jpg"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="jLabel5"/>
               </Properties>
             </Component>

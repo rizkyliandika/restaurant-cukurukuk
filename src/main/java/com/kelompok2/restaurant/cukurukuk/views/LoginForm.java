@@ -4,9 +4,6 @@
  */
 package com.kelompok2.restaurant.cukurukuk.views;
 
-import com.kelompok2.restaurant.cukurukuk.controller.CashierDaoImpl;
-import com.kelompok2.restaurant.cukurukuk.dao.CashierDao;
-import com.kelompok2.restaurant.cukurukuk.models.Cashier;
 import java.util.List;
 
 /**
@@ -190,11 +187,7 @@ public class LoginForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        CashierDao cashierDao = new CashierDaoImpl();
-        List<Cashier> cashiers = cashierDao.getAll();
-        for (Cashier cashier : cashiers) {
-            System.out.println(cashier.toString());
-        }
+        
     }//GEN-LAST:event_loginActionPerformed
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed

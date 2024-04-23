@@ -11,15 +11,24 @@ import java.sql.*;
  * @author P051021010
  */
 public class DatabaseConnection {
-    private Connection connection = null;
+    private static Connection con = null;
+    private static final String DB_URI = "jdbc:mysql://localhost:3306/cashier";
+    private static final String DB_USERNAME = "root";
+    private static final String DB_PASSWORD = "";
     
-    public Connection Datasource() throws SQLException, ClassNotFoundException {
-        Class.forName("org.h2.Driver");
-        String url = "jdbc:mysql://localhost:3306/restaurant";
-        String username = "root";
-        String password = "D1k4321";
-        this.connection = DriverManager.getConnection(url, username, password);
-        return this.connection;
+    static {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection(DB_URI, DB_USERNAME, DB_PASSWORD);
+        }
+        catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    
+    public static Connection getConnection()
+    {
+        return con;
     }
 
 }
