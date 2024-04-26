@@ -12,13 +12,13 @@ import java.sql.*;
  */
 public class DatabaseConnection {
     private static Connection con = null;
-    private static final String DB_URI = "jdbc:mysql://localhost:3306/cashier";
+    private static final String DB_URI = "jdbc:mysql://localhost:3306/restaurant";
     private static final String DB_USERNAME = "root";
-    private static final String DB_PASSWORD = "";
+    private static final String DB_PASSWORD = "D1k4321";
     
     static {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DB_URI, DB_USERNAME, DB_PASSWORD);
         }
         catch (ClassNotFoundException | SQLException e) {
