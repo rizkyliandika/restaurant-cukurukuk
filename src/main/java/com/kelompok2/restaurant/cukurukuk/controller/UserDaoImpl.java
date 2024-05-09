@@ -13,7 +13,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,7 +24,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public int add(User user) throws SQLException {
-        String query = "INSERT INTO cashier.`user` (username, email, password, active) VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO restaurant.`user` (username, email, password, active) VALUES (?, ?, ?, ?)";
         PreparedStatement ps = con.prepareStatement(query);
 
         ps.setString(1, user.getUsername());
@@ -38,7 +37,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void delete(int id) throws SQLException {
-        String query = "DELETE FROM user where id =?";
+        String query = "DELETE FROM restaurant.`user` where id =?";
         PreparedStatement ps
                 = con.prepareStatement(query);
         ps.setInt(1, id);
@@ -47,7 +46,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User getUser(int id) throws SQLException {
-        String query = "SELECT * FROM user where id=?";
+        String query = "SELECT * FROM restaurant.`user` where id=?";
         PreparedStatement ps = con.prepareStatement(query);
 
         ps.setInt(1, id);
@@ -71,7 +70,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> getUsers() throws SQLException {
-        String query = "SELECT * FROM user";
+        String query = "SELECT * FROM restaurant.`user`";
         PreparedStatement ps
                 = con.prepareStatement(query);
         ResultSet rs = ps.executeQuery();
@@ -92,7 +91,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void update(User user) throws SQLException {
         String query
-                = "UPDATE user set username=?, email=?, password=?, active=?, where id = ?";
+                = "UPDATE restaurant.`user` set username=?, email=?, password=?, active=?, where id = ?";
         PreparedStatement ps
                 = con.prepareStatement(query);
         ps.setString(1, user.getUsername());
@@ -104,7 +103,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User getUserByUsername(String username) throws SQLException {
-        String query = "SELECT * FROM user where username=?";
+        String query = "SELECT * FROM restaurant.`user` where username=?";
         PreparedStatement ps
                 = con.prepareStatement(query);
 
@@ -129,7 +128,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User login(String username, String password) throws SQLException {
-        String query = "SELECT * FROM user where username=? AND password=?";
+        String query = "SELECT * FROM restaurant.`user` where username=? AND password=?";
         PreparedStatement ps
                 = con.prepareStatement(query);
 

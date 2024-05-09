@@ -5,6 +5,7 @@
 package com.kelompok2.restaurant.cukurukuk.dao;
 
 import com.kelompok2.restaurant.cukurukuk.models.Table;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -12,9 +13,9 @@ import java.util.List;
  * @author P051021010
  */
 public interface TableDao {
-    Table get(int id);
-    List<Table> getAll();
-    void save(Table table);
-    void update(Table table);
-    void delete(Table table);
+    public int add(Table table) throws SQLException;
+    public void delete (int id) throws SQLException;
+    public Table getTable(int id) throws SQLException;
+    public List<Table> getTables() throws SQLException;
+    public void update(Table user) throws SQLException;
 }

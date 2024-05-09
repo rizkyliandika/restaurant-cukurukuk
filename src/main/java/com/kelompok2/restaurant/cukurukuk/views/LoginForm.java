@@ -202,11 +202,11 @@ public class LoginForm extends javax.swing.JFrame {
     }//GEN-LAST:event_loginActionPerformed
 
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_passwordActionPerformed
 
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_usernameActionPerformed
 
     /**

@@ -12,19 +12,16 @@ import java.util.Objects;
  */
 public class Table {
     private int id;
-    private String tableNumber;
+    private int tableNumber;
+    private boolean active;
     
-    public Table () {
+    public Table (int tableNumber, boolean active) {
+        this.tableNumber = tableNumber;
+        this.active = active;
+    }
+    
+    public Table() {
         
-    }
-    
-    public Table (String tableNumber) {
-        this.tableNumber = tableNumber;
-    }
-    
-    public Table (int id, String tableNumber) {
-        this.id = id;
-        this.tableNumber = tableNumber;
     }
 
     public int getId() {
@@ -35,19 +32,28 @@ public class Table {
         this.id = id;
     }
 
-    public String getTableNumber() {
+    public int getTableNumber() {
         return tableNumber;
     }
 
-    public void setTableNumber(String tableNumber) {
+    public void setTableNumber(int tableNumber) {
         this.tableNumber = tableNumber;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + this.id;
-        hash = 97 * hash + Objects.hashCode(this.tableNumber);
+        int hash = 5;
+        hash = 23 * hash + this.id;
+        hash = 23 * hash + Objects.hashCode(this.tableNumber);
+        hash = 23 * hash + (this.active ? 1 : 0);
         return hash;
     }
 
@@ -66,11 +72,14 @@ public class Table {
         if (this.id != other.id) {
             return false;
         }
+        if (this.active != other.active) {
+            return false;
+        }
         return Objects.equals(this.tableNumber, other.tableNumber);
     }
 
     @Override
     public String toString() {
-        return "Table{" + "id=" + id + ", tableNumber=" + tableNumber + '}';
+        return "Table{" + "id=" + id + ", tableNumber=" + tableNumber + ", active=" + active + '}';
     }
 }
