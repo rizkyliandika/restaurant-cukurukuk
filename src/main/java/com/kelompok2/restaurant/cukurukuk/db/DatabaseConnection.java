@@ -14,7 +14,7 @@ public class DatabaseConnection {
     private static Connection con = null;
     private static final String DB_URI = "jdbc:mysql://localhost:3306/restaurant";
     private static final String DB_USERNAME = "root";
-    private static final String DB_PASSWORD = "D1k4321";
+    private static final String DB_PASSWORD = "";
     
     static {
         try {

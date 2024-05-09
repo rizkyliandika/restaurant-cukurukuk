@@ -1,10 +1,8 @@
-com\kelompok2\restaurant\cukurukuk\models\Menu.class
 com\kelompok2\restaurant\cukurukuk\models\User.class
 com\kelompok2\restaurant\cukurukuk\RestaurantCukurukuk.class
 com\kelompok2\restaurant\cukurukuk\dao\UserDao.class
 com\kelompok2\restaurant\cukurukuk\models\Table.class
 com\kelompok2\restaurant\cukurukuk\views\MenuForm$1.class
-com\kelompok2\restaurant\cukurukuk\models\Customer.class
 com\kelompok2\restaurant\cukurukuk\views\LoginForm.class
 com\kelompok2\restaurant\cukurukuk\controller\TableDaoImpl.class
 com\kelompok2\restaurant\cukurukuk\views\LoginForm$2.class
